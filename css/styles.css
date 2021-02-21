@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --gradient-violet: hsl(273, 75%, 66%);
+  --gradient-blue: hsl(240, 73%, 65%);
+  --text-dark: hsl(237, 12%, 33%);
+  --text-light: hsl(240, 6%, 50%);
+  --gray-light: hsl(240, 5%, 91%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--gradient-blue)), to(var(--gradient-violet)));
+  background-image: linear-gradient(to top, var(--gradient-blue) 0%, var(--gradient-violet) 100%);
+  background-repeat: no-repeat;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.card {
+  margin-top: 50px;
+  min-height: 60vh;
+  border: none;
+}
+
+.card-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  position: relative;
+}
+
+.card-header {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  background-color: #fff;
+  border-bottom: none;
+  min-height: 75px;
+}
+
+.card-body {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.accordion-item h2 {
+  font-weight: 400;
+}
+
+.rounded-custom {
+  border-radius: 24px;
+}
+
+img.bg-pattern-mobile {
+  position: absolute;
+  top: 0;
+  left: 15%;
+}
+
+img.woman {
+  position: absolute;
+  top: -15%;
+  left: 10%;
+  z-index: 1;
+  width: 70%;
+}
+
+img.box-desktop {
+  position: absolute;
+  left: -12%;
+  top: 35%;
+  z-index: 9;
+}
+
+.accordion-button {
+  padding-left: 0;
+}
+
+.accordion-button,
+.accordion-item {
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--text-dark);
+  background-color: #fff;
+  font-weight: 700;
+}
+
+.accordion-button:focus {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: var(--text-dark);
+}
+
+.accordion-button.collapsed {
+  font-size: 14px;
+}
+
+.accordion-button.collapsed:hover {
+  color: var(--soft-red);
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f47c57'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f47c57'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 80%;
+    min-height: 60vh;
+  }
+  .card-horizontal {
+    overflow: hidden;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 40px;
+  }
+  .card-body {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .card-title {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    text-align: left;
+    font-size: 2.4rem;
+  }
+  .rounded-custom {
+    border-radius: 24px;
+  }
+  img.bg-pattern-desktop {
+    position: absolute;
+    bottom: -20%;
+    left: -50%;
+  }
+  img.woman {
+    position: absolute;
+    top: 5%;
+    left: -8%;
+    z-index: 1;
+    width: 50%;
+  }
+  img.box-desktop {
+    position: absolute;
+    left: -12%;
+    top: 35%;
+    z-index: 9;
+  }
+  .accordion-button.collapsed {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
